@@ -1,5 +1,6 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
+// eslint-disable-next-line import/no-absolute-path
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
@@ -12,7 +13,7 @@ document.querySelector('#app').innerHTML = `
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
     <h1>Hello G38 Web - A</h1>
-    <p>Clase de Introducción a Vite</p>
+    <p>Clase de Introducción a Vite 2025</p>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
