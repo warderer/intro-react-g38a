@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "usernamehw.errorlens",
+        "seatonjiang.gitmoji-vscode",
+        "nixon.env-cmd-file-syntax",
+        "dsznajder.es7-react-js-snippets"
+    ]
+}
