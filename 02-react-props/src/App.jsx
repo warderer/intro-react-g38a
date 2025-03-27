@@ -3,8 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+function App({ props }) {
   const [count, setCount] = useState(0)
+  console.log(props)
 
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React + G38A</h1>
+      <p>{props.saludo} {props.nombre}</p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 10)}>
           count is {count}
