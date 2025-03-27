@@ -1,10 +1,10 @@
-const HeaderHero = () => {
+const HeaderHero = ({ title, desc, buttonText, buttonLink }) => {
   return (
     <header className="hero">
       <div className="textos-hero">
-        <h1>Bienvenido a Website</h1>
-        <p>Creamos el mejor sitio web para ti</p>
-        <a href="#contacto">Contactame</a>
+        <h1>{title}</h1>
+        <p>{desc}</p>
+        <a href={buttonLink}>{buttonText}</a>
       </div>
       <div className="svg-hero" style={{ height: 150, overflow: "hidden" }}>
         <svg

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <HeaderHero />
+    <HeaderHero title="Bienvenidos G38" desc="Conviertanse en unos desarrolladores Rockstar" buttonText="Inscribirme al Master" buttonLink="https://www.devf.mx" />
     <section className="wave-contenedor website">
       <img src={ilustracion1} alt="" />
       <div className="contenedor-textos-main">
