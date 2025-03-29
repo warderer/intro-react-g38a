@@ -1,13 +1,25 @@
 import { useState } from 'react'
+import ToDoItem from './components/ToDoItem'
 import './App.css'
 
 function App () {
   /* 1. Los estados en React sirven para guardar información que va a utilizar el componente. Esta información tiene la particularidad de que se actualiza la vista cada vez que cambia (se ejecuta nuevamente el return) */
   const [inputValue, setInputValue] = useState('')
 
+  /* 4. Añado un estado para guardar la lista de tareas */
+  const [todoList, setTodoList] = useState([])
+
   // 3b. Función que se ejecuta cuando se hace clic en el botón agregar
+  // 5. Modificar la función para que agregue la tarea a la lista
   const handleAdd = () => {
-    console.log('Agregue:', inputValue)
+    // console.log('Agregue:', inputValue)
+    setTodoList([...todoList, inputValue])
+    setInputValue('') // Limpiar el input
+  }
+
+  // 6. Función que se ejecuta cuando se hace clic en el botón eliminar
+  const deleteTodo = (index) => {
+    setTodoList(todoList.filter((todo, i) => i !== index))
   }
 
   return (
@@ -26,9 +38,15 @@ function App () {
 
       {/* ul>li{Item $}*3>button{Eliminar} */}
       <ul>
-        <li>Item 1<button>Eliminar</button></li>
-        <li>Item 2<button>Eliminar</button></li>
-        <li>Item 3<button>Eliminar</button></li>
+        {
+          todoList.map((todo, index) => (
+            <ToDoItem
+              key={index}
+              todoName={todo}
+              handleDelete={() => deleteTodo(index)}
+            />
+          ))
+        }
       </ul>
     </>
   )
