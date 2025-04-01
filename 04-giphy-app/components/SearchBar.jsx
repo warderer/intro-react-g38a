@@ -18,7 +18,9 @@ const SearchBar = ({ handleSearch }) => {
         className='search-button'
         type='button'
         onClick={() => { handleSearch(search) }}
-      />
+      >
+        Buscar
+      </button>
     </div>
   )
 }
